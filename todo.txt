@@ -1,0 +1,11 @@
+• delete support DONE
+	• DONE: when setting movie to nil in a cell, set icon to nil and title back to localised 'Drop file here'
+	• DONE: pressing delete/fdel sets a cell's movie back to nil
+• saving of the matrix DONE
+• update support for devices other than the default DONE
+	• maybe gank my AudioDevice class? YUP
+• add/remove cells by resizing the window
+• nib =~ g/NewApplication/s//BZSoundboard/ (The_Tick)
+• import/export playlists (huwr) OR
+• document-based (huwr/The_Tick)
+• cmd-click cells to find the file (The_Tick)

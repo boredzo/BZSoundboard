@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'AudioPlayer' target in the 'AudioPlayer' project
+//
+
+#include <CoreAudio/CoreAudio.h>
+#include <QuickTime/QuickTime.h>
+
+#ifdef __OBJC__
+#	import <Cocoa/Cocoa.h>
+#	import <QTKit/QTKit.h>
+#endif

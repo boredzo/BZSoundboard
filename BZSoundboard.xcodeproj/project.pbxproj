@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		072866F30983863700C9C0E4 /* NSMutableArray+EasyMutation.m in Sources */ = {isa = PBXBuildFile; fileRef = 072866F20983863700C9C0E4 /* NSMutableArray+EasyMutation.m */; };
+		072B2DE30984ABDC00C0DDD1 /* AudioDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 072B2DE20984ABDB00C0DDD1 /* AudioDevice.m */; };
+		072B2DFD0984B0A700C0DDD1 /* QTMovie+AudioDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 072B2DFC0984B0A700C0DDD1 /* QTMovie+AudioDevice.m */; };
+		0747BE79092B1D53002A2C63 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0747BE78092B1D53002A2C63 /* AudioPlayer.m */; };
+		0747BED8092B3181002A2C63 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0747BED7092B3181002A2C63 /* QTKit.framework */; };
+		0747BEF5092B3324002A2C63 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0747BEF4092B3324002A2C63 /* QuickTime.framework */; };
+		0747BF3C092B3627002A2C63 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0747BF3B092B3627002A2C63 /* CoreAudio.framework */; };
+		0747C039092B4FE9002A2C63 /* CFURLAdditions.c in Sources */ = {isa = PBXBuildFile; fileRef = 0747C035092B4FE9002A2C63 /* CFURLAdditions.c */; };
+		0747C03A092B4FE9002A2C63 /* NSURLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0747C038092B4FE9002A2C63 /* NSURLAdditions.m */; };
+		0747C04D092B5289002A2C63 /* CFGrowlAdditions.c in Sources */ = {isa = PBXBuildFile; fileRef = 0747C04B092B5289002A2C63 /* CFGrowlAdditions.c */; };
+		0795B81209821731002412FE /* BZMovieButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795B81109821731002412FE /* BZMovieButtonCell.m */; };
+		0795B81F09821B8C002412FE /* BZEventForwardingMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795B81E09821B8C002412FE /* BZEventForwardingMatrix.m */; };
+		0795B92F09824249002412FE /* BZDragAndDropMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795B92E09824249002412FE /* BZDragAndDropMatrix.m */; };
+		07E52FFB092C901F00690C26 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E52FFA092C901F00690C26 /* Carbon.framework */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4A9504CCFFE6A4B311CA0CBA /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PREBINDING = NO;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4A9504CDFFE6A4B311CA0CBA /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PREBINDING = NO;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXFileReference section */
+		0728666E0983724200C9C0E4 /* BZKeyAcceptingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZKeyAcceptingCell.h; sourceTree = "<group>"; };
+		072866F10983863700C9C0E4 /* NSMutableArray+EasyMutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+EasyMutation.h"; sourceTree = "<group>"; };
+		072866F20983863700C9C0E4 /* NSMutableArray+EasyMutation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+EasyMutation.m"; sourceTree = "<group>"; };
+		072B2DC30984A8C100C0DDD1 /* CommonNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonNotifications.h; sourceTree = "<group>"; };
+		072B2DE10984ABDB00C0DDD1 /* AudioDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDevice.h; sourceTree = "<group>"; };
+		072B2DE20984ABDB00C0DDD1 /* AudioDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioDevice.m; sourceTree = "<group>"; };
+		072B2DFB0984B0A700C0DDD1 /* QTMovie+AudioDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QTMovie+AudioDevice.h"; sourceTree = "<group>"; };
+		072B2DFC0984B0A700C0DDD1 /* QTMovie+AudioDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QTMovie+AudioDevice.m"; sourceTree = "<group>"; };
+		0747BE77092B1D53002A2C63 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		0747BE78092B1D53002A2C63 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		0747BED7092B3181002A2C63 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		0747BEF4092B3324002A2C63 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		0747BF3B092B3627002A2C63 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
+		0747C035092B4FE9002A2C63 /* CFURLAdditions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CFURLAdditions.c; sourceTree = "<group>"; };
+		0747C036092B4FE9002A2C63 /* CFURLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFURLAdditions.h; sourceTree = "<group>"; };
+		0747C037092B4FE9002A2C63 /* NSURLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLAdditions.h; sourceTree = "<group>"; };
+		0747C038092B4FE9002A2C63 /* NSURLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLAdditions.m; sourceTree = "<group>"; };
+		0747C04B092B5289002A2C63 /* CFGrowlAdditions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CFGrowlAdditions.c; sourceTree = "<group>"; };
+		0747C04C092B5289002A2C63 /* CFGrowlAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFGrowlAdditions.h; sourceTree = "<group>"; };
+		0795B81009821731002412FE /* BZMovieButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZMovieButtonCell.h; sourceTree = "<group>"; };
+		0795B81109821731002412FE /* BZMovieButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZMovieButtonCell.m; sourceTree = "<group>"; };
+		0795B81D09821B8C002412FE /* BZEventForwardingMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZEventForwardingMatrix.h; sourceTree = "<group>"; };
+		0795B81E09821B8C002412FE /* BZEventForwardingMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZEventForwardingMatrix.m; sourceTree = "<group>"; };
+		0795B87509822DB0002412FE /* BZClickableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZClickableCell.h; sourceTree = "<group>"; };
+		0795B92D09824249002412FE /* BZDragAndDropMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZDragAndDropMatrix.h; sourceTree = "<group>"; };
+		0795B92E09824249002412FE /* BZDragAndDropMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZDragAndDropMatrix.m; sourceTree = "<group>"; };
+		07E52FFA092C901F00690C26 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* AudioPlayer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* BZSoundboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BZSoundboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				0747BED8092B3181002A2C63 /* QTKit.framework in Frameworks */,
+				0747BEF5092B3324002A2C63 /* QuickTime.framework in Frameworks */,
+				0747BF3C092B3627002A2C63 /* CoreAudio.framework in Frameworks */,
+				07E52FFB092C901F00690C26 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		072B2E0E0984B22300C0DDD1 /* AudioDevice */ = {
+			isa = PBXGroup;
+			children = (
+				072B2DE10984ABDB00C0DDD1 /* AudioDevice.h */,
+				072B2DE20984ABDB00C0DDD1 /* AudioDevice.m */,
+				072B2DFB0984B0A700C0DDD1 /* QTMovie+AudioDevice.h */,
+				072B2DFC0984B0A700C0DDD1 /* QTMovie+AudioDevice.m */,
+			);
+			name = AudioDevice;
+			sourceTree = "<group>";
+		};
+		0747C034092B4FE9002A2C63 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				0747C04C092B5289002A2C63 /* CFGrowlAdditions.h */,
+				0747C04B092B5289002A2C63 /* CFGrowlAdditions.c */,
+				0747C036092B4FE9002A2C63 /* CFURLAdditions.h */,
+				0747C035092B4FE9002A2C63 /* CFURLAdditions.c */,
+				0747C037092B4FE9002A2C63 /* NSURLAdditions.h */,
+				0747C038092B4FE9002A2C63 /* NSURLAdditions.m */,
+				072866F10983863700C9C0E4 /* NSMutableArray+EasyMutation.h */,
+				072866F20983863700C9C0E4 /* NSMutableArray+EasyMutation.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		0795B92C09824217002412FE /* Generic things */ = {
+			isa = PBXGroup;
+			children = (
+				0795B87509822DB0002412FE /* BZClickableCell.h */,
+				0728666E0983724200C9C0E4 /* BZKeyAcceptingCell.h */,
+				0795B81D09821B8C002412FE /* BZEventForwardingMatrix.h */,
+				0795B81E09821B8C002412FE /* BZEventForwardingMatrix.m */,
+				0795B92D09824249002412FE /* BZDragAndDropMatrix.h */,
+				0795B92E09824249002412FE /* BZDragAndDropMatrix.m */,
+			);
+			name = "Generic things";
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0747BE77092B1D53002A2C63 /* AudioPlayer.h */,
+				0747BE78092B1D53002A2C63 /* AudioPlayer.m */,
+				072B2DC30984A8C100C0DDD1 /* CommonNotifications.h */,
+				0795B81009821731002412FE /* BZMovieButtonCell.h */,
+				0795B81109821731002412FE /* BZMovieButtonCell.m */,
+				072B2E0E0984B22300C0DDD1 /* AudioDevice */,
+				0795B92C09824217002412FE /* Generic things */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0747BF3B092B3627002A2C63 /* CoreAudio.framework */,
+				0747BEF4092B3324002A2C63 /* QuickTime.framework */,
+				0747BED7092B3181002A2C63 /* QTKit.framework */,
+				07E52FFA092C901F00690C26 /* Carbon.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* BZSoundboard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* BZSoundboard */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				0747C034092B4FE9002A2C63 /* Additions */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = BZSoundboard;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* AudioPlayer_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* BZSoundboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0747BE6C092B1BF1002A2C63 /* Build configuration list for PBXNativeTarget "BZSoundboard" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AudioPlayer_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = BZSoundboard;
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			name = BZSoundboard;
+			productInstallPath = "$(HOME)/Applications";
+			productName = BZSoundboard;
+			productReference = 8D1107320486CEB800E47090 /* BZSoundboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 0747BE70092B1BF1002A2C63 /* Build configuration list for PBXProject "BZSoundboard" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4A9504CCFFE6A4B311CA0CBA /* Debug */,
+				4A9504CDFFE6A4B311CA0CBA /* Release */,
+			);
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* BZSoundboard */;
+			projectDirPath = "";
+			targets = (
+				8D1107260486CEB800E47090 /* BZSoundboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				0747BE79092B1D53002A2C63 /* AudioPlayer.m in Sources */,
+				0747C039092B4FE9002A2C63 /* CFURLAdditions.c in Sources */,
+				0747C03A092B4FE9002A2C63 /* NSURLAdditions.m in Sources */,
+				0747C04D092B5289002A2C63 /* CFGrowlAdditions.c in Sources */,
+				0795B81209821731002412FE /* BZMovieButtonCell.m in Sources */,
+				0795B81F09821B8C002412FE /* BZEventForwardingMatrix.m in Sources */,
+				0795B92F09824249002412FE /* BZDragAndDropMatrix.m in Sources */,
+				072866F30983863700C9C0E4 /* NSMutableArray+EasyMutation.m in Sources */,
+				072B2DE30984ABDC00C0DDD1 /* AudioDevice.m in Sources */,
+				072B2DFD0984B0A700C0DDD1 /* QTMovie+AudioDevice.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0747BE6D092B1BF1002A2C63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AudioPlayer_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = BZSoundboard;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		0747BE6E092B1BF1002A2C63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = NO;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_FAST_OBJC_DISPATCH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AudioPlayer_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PREBINDING = NO;
+				PRODUCT_NAME = BZSoundboard;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		0747BE6F092B1BF1002A2C63 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AudioPlayer_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = BZSoundboard;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		0747BE71092B1BF1002A2C63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+			};
+			name = Debug;
+		};
+		0747BE72092B1BF1002A2C63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+			};
+			name = Release;
+		};
+		0747BE73092B1BF1002A2C63 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0747BE6C092B1BF1002A2C63 /* Build configuration list for PBXNativeTarget "BZSoundboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0747BE6D092B1BF1002A2C63 /* Debug */,
+				0747BE6E092B1BF1002A2C63 /* Release */,
+				0747BE6F092B1BF1002A2C63 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		0747BE70092B1BF1002A2C63 /* Build configuration list for PBXProject "BZSoundboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0747BE71092B1BF1002A2C63 /* Debug */,
+				0747BE72092B1BF1002A2C63 /* Release */,
+				0747BE73092B1BF1002A2C63 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
