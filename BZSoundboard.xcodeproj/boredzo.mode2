@@ -223,11 +223,11 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>0775F93D098E38F800812F08</string>
+						<string>07C654FE0990BD2C002F6A3D</string>
 						<key>history</key>
 						<array>
 							<string>07EC03AA098D12510037BF4C</string>
-							<string>0775F92B098E1A3D00812F08</string>
+							<string>0775F93D098E38F800812F08</string>
 						</array>
 						<key>prevStack</key>
 						<array>
@@ -268,11 +268,11 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>0775F93E098E38F800812F08</string>
+						<string>07C654FF0990BD2C002F6A3D</string>
 						<key>history</key>
 						<array>
 							<string>07A79A1C098A036F000CEE96</string>
-							<string>0775F92C098E1A3D00812F08</string>
+							<string>0775F93E098E38F800812F08</string>
 						</array>
 						<key>nextStack</key>
 						<array>
@@ -546,8 +546,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>0775F931098E353B00812F08</string>
-				<string>0775F932098E353B00812F08</string>
+				<string>07C654F80990BCC5002F6A3D</string>
+				<string>07C654F90990BCC5002F6A3D</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -565,7 +565,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>160315640.85655501</real>
+	<real>160480444.68088901</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>3</integer>
 	<key>ToolbarIsVisible</key>
@@ -584,7 +584,6 @@
 		<string>0795B83C09822895002412FE</string>
 		<string>0795B84209822895002412FE</string>
 		<string>/Users/boredzo/Projects/BZSoundboard/BZSoundboard.xcodeproj</string>
-		<string>072CCCDF092F2680001B6CAD</string>
 	</array>
 	<key>WindowString</key>
 	<string>858 508 350 420 0 0 1280 1002 </string>
@@ -1119,8 +1118,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {491, 168}}</string>
-											<string>{{0, 173}, {491, 270}}</string>
+											<string>{{0, 0}, {366, 168}}</string>
+											<string>{{0, 173}, {366, 270}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -1169,9 +1168,9 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C0AD2B3069F1EA900FABCE6</string>
-				<string>0775F935098E353B00812F08</string>
+				<string>07C654FC0990BCC5002F6A3D</string>
 				<string>1CD0528B0623707200166675</string>
-				<string>0775F936098E353B00812F08</string>
+				<string>07C654FD0990BCC5002F6A3D</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.run</string>

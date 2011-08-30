@@ -27,6 +27,7 @@
 • undo DONE
 
 0.3:
+• stop playback of the movie in a cell when the cell is destroyed
 • notice when the modifiers change during a resize
 • notice when files disappear, and destroy their associated movies
 

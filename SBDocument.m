@@ -71,7 +71,7 @@ enum {
 #define UNDO_MATRIXDIMENSIONSCHANGED @"Change Soundboard Dimensions"
 //note: old/new value in UNDO_CELLSIZECHANGED includes intercell spacing.
 #define UNDO_CELLSIZECHANGED @"Change Cell Size"
-#define UNDO_CELLMOVIECHANGED @"Change Movie in Cell"
+#define UNDO_CELLMOVIECHANGED @"Change File in Cell"
 #define UNDO_VOLUMECHANGED @"Change Volume"
 #define UNDO_DEVICECHANGED @"Change Output Device"
 

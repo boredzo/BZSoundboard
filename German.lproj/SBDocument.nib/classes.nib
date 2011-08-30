@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {CLASS = BZClickableMatrix; LANGUAGE = ObjC; SUPERCLASS = NSMatrix; }, 
+        {
+            CLASS = BZDragAndDropMatrix; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = BZClickableMatrix; 
+        }, 
+        {CLASS = BZMovieButtonCell; LANGUAGE = ObjC; SUPERCLASS = NSButtonCell; }, 
+        {CLASS = BZResizeNotifyingWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = SBDocument; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                devicesPopUp = NSPopUpButton; 
+                moviesMatrix = NSMatrix; 
+                playerWindow = NSWindow; 
+            }; 
+            SUPERCLASS = NSDocument; 
+        }
+    ); 
+    IBVersion = 1; 
+}
