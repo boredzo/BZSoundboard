@@ -48,13 +48,8 @@
 }
 
 - (void)draggingExited:(id <NSDraggingInfo>)sender {
-	NSPoint pt = [self convertPoint:[sender draggingLocation] fromView:[[sender draggingDestinationWindow] contentView]];
-	int row, col;
-	[self getRow:&row column:&col forPoint:pt];
-
-	id cell = [self cellAtRow:row column:col];
-	if(cell && [cell respondsToSelector:@selector(draggingEntered:)])
-		[cell draggingEntered:sender];
+	if(lastHoveredCell && [lastHoveredCell respondsToSelector:@selector(draggingExited:)])
+		[lastHoveredCell draggingExited:sender];
 
 	lastHoveredCell = currentHoveredCell = nil;
 }

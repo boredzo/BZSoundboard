@@ -9,7 +9,9 @@
 //forwards mouse events to the cell under the mouse.
 //forwards key events to the key cell.
 
-@interface BZEventForwardingMatrix : NSMatrix {
+#import "BZNotifyingMatrix.h"
+
+@interface BZEventForwardingMatrix : BZNotifyingMatrix {
 
 }
 

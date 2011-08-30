@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>layers</key>
+	<array>
+		<dict>
+			<key>file</key>
+			<string>documenticon.tiff</string>
+			<key>offsetX</key>
+			<real>0.0</real>
+			<key>offsetY</key>
+			<real>0.0</real>
+			<key>type</key>
+			<string>image</string>
+		</dict>
+		<dict>
+			<key>classname</key>
+			<string>CISourceAtopCompositing</string>
+			<key>type</key>
+			<string>filter</string>
+			<key>values</key>
+			<dict>
+				<key>inputImage</key>
+				<string>sound_icon_128.tiff</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

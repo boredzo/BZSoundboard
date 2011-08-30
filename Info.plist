@@ -4,10 +4,67 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>sboard</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>soundboard_document_icon</string>
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>application/x-soundboard</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>BZ Soundboard document</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>SBRD</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>org.boredzo.soundboard.soundboard</string>
+			</array>
+			<key>LSTypeIsPackage</key>
+			<false/>
+			<key>NSDocumentClass</key>
+			<string>SBDocument</string>
+		</dict>
+	</array>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeIdentifier</key>
+			<string>org.boredzo.soundboard.soundboard</string>
+			<key>UTTypeDescription</key>
+			<string>BZ Soundboard document</string>
+			<key>UTTypeIconFile</key>
+			<string>soundboard_document_icon.icns</string>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>com.apple.ostype</key>
+				<string>SBRD</string>
+				<key>public.filename-extension</key>
+				<array>
+					<string>sboard</string>
+				</array>
+				<key>public.mime-type</key>
+				<string>application/x-soundboard</string>
+			</dict>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>BZSoundboard</string>
 	<key>CFBundleIconFile</key>
-	<string></string>
+	<string>nine_sound_buttons</string>
 	<key>CFBundleIdentifier</key>
 	<string>org.boredzo.soundboard</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -17,7 +74,7 @@
 	<key>CFBundleSignature</key>
 	<string>BZSB</string>
 	<key>CFBundleVersion</key>
-	<string>0.1</string>
+	<string>0.2</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

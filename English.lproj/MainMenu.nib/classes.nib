@@ -1,21 +1,5 @@
 {
     IBClasses = (
-        {
-            CLASS = AXCArrayControllerWithDragAndDrop; 
-            LANGUAGE = ObjC; 
-            OUTLETS = {dragValidator = id; }; 
-            SUPERCLASS = NSArrayController; 
-        }, 
-        {
-            CLASS = AudioPlayer; 
-            LANGUAGE = ObjC; 
-            OUTLETS = {
-                devicesPopUp = NSPopUpButton; 
-                moviesMatrix = NSMatrix; 
-                playerWindow = NSWindow; 
-            }; 
-            SUPERCLASS = NSObject; 
-        }, 
         {CLASS = BZClickableMatrix; LANGUAGE = ObjC; SUPERCLASS = NSMatrix; }, 
         {
             CLASS = BZDragAndDropMatrix; 

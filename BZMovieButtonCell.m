@@ -22,7 +22,11 @@
 		[[NSNotificationCenter defaultCenter] addObserver:self
 												 selector:@selector(selectedDeviceChanged:)
 													 name:SELECTED_DEVICE_CHANGED_NOTIFICATION
-												   object:nil];
+												   object:notificationObject];
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(selectedVolumeChanged:)
+													 name:VOLUME_CHANGED_NOTIFICATION
+												   object:notificationObject];
 	}
 	return self;
 }
@@ -31,7 +35,11 @@
 		[[NSNotificationCenter defaultCenter] addObserver:self
 												 selector:@selector(selectedDeviceChanged:)
 													 name:SELECTED_DEVICE_CHANGED_NOTIFICATION
-												   object:nil];
+												   object:notificationObject];
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(selectedVolumeChanged:)
+													 name:VOLUME_CHANGED_NOTIFICATION
+												   object:notificationObject];
 	}
 	return self;
 }
@@ -40,20 +48,46 @@
 		[[NSNotificationCenter defaultCenter] addObserver:self
 												 selector:@selector(selectedDeviceChanged:)
 													 name:SELECTED_DEVICE_CHANGED_NOTIFICATION
-												   object:nil];
+												   object:notificationObject];
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(selectedVolumeChanged:)
+													 name:VOLUME_CHANGED_NOTIFICATION
+												   object:notificationObject];
 	}
 	return self;
 }
+//DON'T FORGET to add new notifications in -setNotificationObject: as well!
 
 - (void)dealloc {
-	[[NSNotificationCenter defaultCenter] removeObserver:self
-													name:SELECTED_DEVICE_CHANGED_NOTIFICATION
-												  object:nil];
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 
 	[super dealloc];
 }
 
-#pragma mark -
+#pragma mark Generating useful info
+
+- (NSString *)tooltip {
+	if(movie) {
+		return [NSString stringWithFormat:@"%@\n%@",
+			[movie attributeForKey:QTMovieDisplayNameAttribute],
+			[movie attributeForKey:QTMovieFileNameAttribute]];
+	} else
+		return nil;
+}
+
+- (NSRect)frame {
+	NSView *view = [self controlView];
+	if([view isKindOfClass:[NSMatrix class]]) {
+		NSMatrix *matrix = (NSMatrix *)view;
+		int row, col;
+		[matrix getRow:&row column:&col ofCell:self];
+		return [matrix cellFrameAtRow:row column:col];
+	} else {
+		return [view frame];
+	}
+}
+
+#pragma mark Accessors
 
 - (QTMovie *)movie {
 	return movie;
@@ -65,14 +99,34 @@
 		[movie release];
 		movie = [newMovie retain];
 
+		NSView *view = [self controlView];
+		NSMatrix *matrix = (NSMatrix *)view;
 		if(movie) {
 			[movie setAudioDevice:device];
+			[movie setVolume:volume];
 
-			[self setImage:[[NSWorkspace sharedWorkspace] iconForFile:[movie attributeForKey:QTMovieFileNameAttribute]]];
+			NSString *path = [movie attributeForKey:QTMovieFileNameAttribute];
+			[self setImage:[[NSWorkspace sharedWorkspace] iconForFile:path]];
 			[self setTitle:[movie attributeForKey:QTMovieDisplayNameAttribute]];
+
+			if([view isKindOfClass:[NSMatrix class]]) {
+				int row, col;
+				[matrix getRow:&row column:&col ofCell:self];
+				tooltipTag = [matrix addToolTipRect:[matrix cellFrameAtRow:row column:col]
+											  owner:self
+										   userData:NULL];
+			} else {
+				[view setToolTip:[self tooltip]];
+			}
 		} else {
 			[self setImage:nil];
 			[self setTitle:NSLocalizedString(@"Drop file here", /*comment*/ nil)];
+			if([view isKindOfClass:[NSMatrix class]]) {
+				[matrix removeToolTip:tooltipTag];
+			} else {
+				[view setToolTip:nil];
+			}
+			[self setState:NSOffState];
 		}
 
 		[[self controlView] setNeedsDisplay:YES];
@@ -93,14 +147,74 @@
 	}
 }
 
+- (float)volume {
+	return volume;
+}
+- (void)setVolume:(float)newVol {
+	volume = newVol;
+	[movie setVolume:newVol];
+}
+
+- (id <NSObject>)notificationObject {
+	return notificationObject;
+}
+- (void)setNotificationObject:(id <NSObject>)newObj {
+	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+
+	[nc removeObserver:self
+				  name:SELECTED_DEVICE_CHANGED_NOTIFICATION
+				object:notificationObject];
+	[nc removeObserver:self
+				  name:VOLUME_CHANGED_NOTIFICATION
+				object:notificationObject];
+	
+	notificationObject = newObj;
+
+	[nc addObserver:self
+		   selector:@selector(selectedDeviceChanged:)
+			   name:SELECTED_DEVICE_CHANGED_NOTIFICATION
+			 object:notificationObject];
+	[nc addObserver:self
+		   selector:@selector(selectedVolumeChanged:)
+			   name:VOLUME_CHANGED_NOTIFICATION
+			 object:notificationObject];
+}
+
+#pragma mark Drawing
+
+- (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView {
+	[super drawWithFrame:cellFrame inView:controlView];
+
+	if(drawDragHighlight) {
+		NSColor *color = [[NSColor alternateSelectedControlColor] colorWithAlphaComponent:0.5f];
+		NSRect   frame = [self frame];
+
+		[color set];
+		NSFrameRectWithWidth(frame, 2.0f);
+
+		drawDragHighlight = NO;
+	}
+}
+
 #pragma mark Drag-and-drop
 
 - (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender {
 	NSArray *array = [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType];
-	if(array && ([array count] == 1U))
+	if(array && ([array count] == 1U)) {
+		drawDragHighlight = YES;
+		[[self controlView] setNeedsDisplayInRect:[self frame]];
+
 		return NSDragOperationLink;
-	else
+	} else
 		return NSDragOperationNone;
+}
+- (void)draggingExited:(id <NSDraggingInfo>)sender {
+	NSArray *array = [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType];
+	if(array && ([array count] == 1U))
+		[[self controlView] setNeedsDisplayInRect:[self frame]];
+}
+- (void)concludeDragOperation:(id <NSDraggingInfo>)sender {
+	[[self controlView] setNeedsDisplayInRect:[self frame]];
 }
 
 - (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
@@ -125,31 +239,47 @@
 #pragma mark BZClickableCell conformance
 
 - (void)mouseDown:(NSEvent *)event {
-	[movie setAttribute:[NSNumber numberWithBool:YES] forKey:QTMovieLoopsAttribute];
-
-	[movie setCurrentTime:QTZeroTime];
-
-	if([movie rate] > FLT_EPSILON) {
-		//if the movie is already playing, stop it.
-		[movie stop];
-		[[NSNotificationCenter defaultCenter] removeObserver:self
-														name:QTMovieDidEndNotification
-													  object:movie];
-		[self setState:NSOffState];
-	} else {
-		//if the movie is not playing, start it.
-		[movie play];
-		[[NSNotificationCenter defaultCenter] addObserver:self
-												 selector:@selector(movieDidEnd:)
-													 name:QTMovieDidEndNotification
-												   object:movie];
-		[self setState:NSOnState];
+	NSView *controlView = [self controlView];
+	if([controlView isKindOfClass:[NSMatrix class]]) {
+		NSMatrix *matrix = (NSMatrix *)controlView;
+		[matrix setKeyCell:self];
 	}
 
-	[[self controlView] setNeedsDisplay:YES];
+	if((!event) || !([event modifierFlags] & NSCommandKeyMask)) {
+		[movie setAttribute:[NSNumber numberWithBool:YES] forKey:QTMovieLoopsAttribute];
+
+		[movie setCurrentTime:QTZeroTime];
+
+		if([movie rate] > FLT_EPSILON) {
+			//if the movie is already playing, stop it.
+			[movie stop];
+			[[NSNotificationCenter defaultCenter] removeObserver:self
+															name:QTMovieDidEndNotification
+														  object:movie];
+			[self setState:NSOffState];
+		} else {
+			//if the movie is not playing, start it.
+			[movie play];
+			[[NSNotificationCenter defaultCenter] addObserver:self
+													 selector:@selector(movieDidEnd:)
+														 name:QTMovieDidEndNotification
+													   object:movie];
+			[self setState:NSOnState];
+		}
+
+		[controlView setNeedsDisplay:YES];
+	}
 }
 - (void)mouseUp:(NSEvent *)event {
-	[movie setAttribute:[NSNumber numberWithBool:NO] forKey:QTMovieLoopsAttribute];
+	if(event && ([event modifierFlags] & NSCommandKeyMask)) {
+		//cmd-click reveals the file.
+		NSString *filename = [movie attributeForKey:QTMovieFileNameAttribute];
+		if(filename) {
+			[[NSWorkspace sharedWorkspace] selectFile:filename
+							 inFileViewerRootedAtPath:[filename stringByDeletingLastPathComponent]];
+		}
+	} else 
+		[movie setAttribute:[NSNumber numberWithBool:NO] forKey:QTMovieLoopsAttribute];
 }
 
 - (void)performClick:sender {
@@ -168,16 +298,8 @@
 				[self setMovie:nil];
 
 				//show a poof.
-				NSRect frame;
+				NSRect frame = [self frame];
 				NSView *view = [self controlView];
-				if([view isKindOfClass:[NSMatrix class]]) {
-					NSMatrix *matrix = (NSMatrix *)view;
-					int row, col;
-					[matrix getRow:&row column:&col ofCell:self];
-					frame = [matrix cellFrameAtRow:row column:col];
-				} else {
-					frame = [view frame];
-				}
 
 				NSPoint centerPoint = {
 					frame.origin.x + frame.size.width  * 0.5f,
@@ -204,6 +326,13 @@
 	return NO;
 }
 
+#pragma mark NSToolTipOwner
+
+//the tooltip for a cell is its path.
+- (NSString *)view:(NSView *)view stringForToolTip:(NSToolTipTag)tag point:(NSPoint)point userData:(void *)userData {
+	return [self tooltip];
+}
+
 #pragma mark Notifications
 
 - (void)movieDidEnd:(NSNotification *)notification {
@@ -215,6 +344,9 @@
 
 - (void)selectedDeviceChanged:(NSNotification *)notification {
 	[self setAudioDevice:[[notification userInfo] objectForKey:SELECTED_DEVICE_AUDIODEVICE]];
+}
+- (void)selectedVolumeChanged:(NSNotification *)notification {
+	[self setVolume:[[[notification userInfo] objectForKey:NEW_VOLUME] floatValue]];
 }
 
 @end
