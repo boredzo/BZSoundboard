@@ -37,33 +37,6 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		4A9504CCFFE6A4B311CA0CBA /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PREBINDING = NO;
-				ZERO_LINK = YES;
-			};
-			name = Debug;
-		};
-		4A9504CDFFE6A4B311CA0CBA /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				PREBINDING = NO;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXFileReference section */
 		070DDD01098B7EF700B72372 /* BZGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZGeometry.h; sourceTree = "<group>"; };
 		070DDD08098B7F0E00B72372 /* BZGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZGeometry.m; sourceTree = "<group>"; };
@@ -288,17 +261,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = AudioPlayer_Prefix.pch;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = BZSoundboard;
-				WRAPPER_EXTENSION = app;
-			};
 			dependencies = (
 			);
 			name = BZSoundboard;
@@ -312,16 +274,18 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 0747BE70092B1BF1002A2C63 /* Build configuration list for PBXProject "BZSoundboard" */;
-			buildSettings = {
+			attributes = {
 			};
-			buildStyles = (
-				4A9504CCFFE6A4B311CA0CBA /* Debug */,
-				4A9504CDFFE6A4B311CA0CBA /* Release */,
-			);
+			buildConfigurationList = 0747BE70092B1BF1002A2C63 /* Build configuration list for PBXProject "BZSoundboard" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* BZSoundboard */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* BZSoundboard */,
 			);
@@ -468,6 +432,7 @@
 		0747BE71092B1BF1002A2C63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 			};
 			name = Debug;
@@ -475,6 +440,7 @@
 		0747BE72092B1BF1002A2C63 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 			};
 			name = Release;
@@ -482,6 +448,7 @@
 		0747BE73092B1BF1002A2C63 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 			};
 			name = Default;

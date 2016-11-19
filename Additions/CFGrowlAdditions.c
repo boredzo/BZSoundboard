@@ -8,7 +8,6 @@
 // This file is under the BSD License, refer to License.txt for details
 
 #include <Carbon/Carbon.h>
-#include <c.h>
 #include <unistd.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
