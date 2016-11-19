@@ -2,8 +2,8 @@
 //  SBDocument.m
 //  BZ Soundboard
 //
-//  Created by Mac-arena the Bored Zo on 2005-11-15.
-//  Copyright 2005 Mac-arena the Bored Zo. All rights reserved.
+//  Created by Peter Hosey on 2005-11-15.
+//  Copyright 2005 Peter Hosey. All rights reserved.
 //
 
 #import "SBDocument.h"
